@@ -1,0 +1,38 @@
+{% extends "appRT/header.html" %}
+{% block content %}
+	{% for post in object_list %}
+	<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-body">				
+					<div class="col-lg-3">
+						<a href="/details/{{post.position}}"><img src="{{ post.image }}" width="100" class="img-rounded"/></a>
+					</div>			
+					<div class="col-lg-9">
+						<table class="table table-condensed">
+							<tbody>
+								<tr>
+									<th> Position </th>
+									<td> {{ post.position }} </td>
+								</tr>
+								<tr>
+									<th> Name </th>
+									<td> {{ post.name }} </td>
+								</tr>
+								<tr>
+									<th> Production company </th>
+									<td> {{ post.productionCompany }} </td>
+								</tr>
+								<tr>
+									<th> Rating </th>
+									<td> 									
+										<span class="label label-success">{{ post.rating }}% </span>
+									</td>
+								</tr>	
+							</tbody>
+						</table>
+					</div>				
+				</div>				
+			</div>
+	  </div>
+	{% endfor %}	
+{% endblock %}

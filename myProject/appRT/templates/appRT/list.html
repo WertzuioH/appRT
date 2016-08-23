@@ -1,0 +1,10 @@
+{% extends "appRT/header.html" %}
+{% block content %}
+	<ul class="list-group">
+	 
+	
+	{% for post in object_list %}
+		 <li class="list-group-item"><a href="/details/{{ post.position }}">{{ post.position }}. </a> {{post.name}}</li>
+	{% endfor %}
+	</ul>
+{% endblock %}

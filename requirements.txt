@@ -1,5 +1,5 @@
 -- begin file --  
 Django==1.10
 beautifulsoup4==4.2.1
-requests==2.2.1
+requests==2.20.0
 -- end file --  
